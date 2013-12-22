@@ -1,0 +1,14 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="UISlideNotification.Demo/SlideNotificationViewController.cs">
+    <Files>
+      <File FileName="UISlideNotification/Extensions.cs" Line="4" Column="30" />
+      <File FileName="UISlideNotification/UISlideNotification.cs" Line="7" Column="30" />
+      <File FileName="UISlideNotification.Demo/SlideNotificationViewController.cs" Line="23" Column="4" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
