@@ -33,7 +33,7 @@ namespace UISlideNotification
 		private int toolbarHeight = 44;
 
 		/// <summary>
-		/// Gets or sets the duration of the notification.
+		/// Gets or sets how long the notification stays open after displaying.
 		/// </summary>
 		/// <value>The duration of the notification in milliseconds</value>
 		public int NotificationDuration
@@ -42,42 +42,70 @@ namespace UISlideNotification
 			set { _notificationDuration = value; }
 		}
 
+		/// <summary>
+		/// Gets or sets the center point of the activity indicator.
+		/// </summary>
+		/// <value>Activity Indicator center point</value>
 		public PointF ActivityIndicatorViewCenter
 		{
 			get { return _activityIndicatorViewCenter; }
 			set { _activityIndicatorViewCenter = value; }
 		}
 
+		/// <summary>
+		/// Gets or sets the activity indicator view alpha value.
+		/// </summary>
+		/// <value>The activity indicator view alpha.</value>
 		public float ActivityIndicatorViewAlpha
 		{
 			get { return _activityIndicatorViewAlpha; }
 			set { _activityIndicatorViewAlpha = value; }
 		}
 
+		/// <summary>
+		/// Gets or sets the activity indicator view style.
+		/// </summary>
+		/// <value>The activity indicator view style.</value>
 		public UIActivityIndicatorViewStyle ActivityIndicatorViewStyle
 		{
 			get { return _activityIndicatorViewStyle; }
 			set { _activityIndicatorViewStyle = value; }
 		}
 
+		/// <summary>
+		/// Gets or sets the background color of the notification.
+		/// </summary>
+		/// <value>The color of the background.</value>
 		public UIColor BackgroundColor
 		{
 			get { return _backgroundColor; }
 			set { _backgroundColor = value; }
 		}
 
+		/// <summary>
+		/// Gets or sets the text color of the notification text
+		/// </summary>
+		/// <value>The color of the text.</value>
 		public UIColor TextColor
 		{
 			get { return _textColor; }
 			set { _textColor = value; }
 		}
 
+		/// <summary>
+		/// Gets or sets the text alignment of the notification text.
+		/// </summary>
+		/// <value>The text alignment.</value>
 		public UITextAlignment TextAlignment
 		{
 			get { return _textAlignment; }
 			set { _textAlignment = value; }
 		}
 
+		/// <summary>
+		/// Gets or sets the alpha value of the notification.
+		/// </summary>
+		/// <value>The alpha.</value>
 		public float Alpha
 		{
 			get { return _labelAlpha; }
