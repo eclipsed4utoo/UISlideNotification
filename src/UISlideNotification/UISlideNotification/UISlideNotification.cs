@@ -143,6 +143,24 @@ namespace UISlideNotification
 			}
 		}
 
+		public UISlideNotification (UIView parentView, string notificationText)
+			: this(parentView, notificationText, false, UISlideNotificationPosition.Bottom)
+		{
+
+		}
+
+		public UISlideNotification (UIView parentView, string notificationText, bool showActivitySpinner)
+			: this(parentView, notificationText, showActivitySpinner, UISlideNotificationPosition.Bottom)
+		{
+
+		}
+
+		public UISlideNotification (UIView parentView, string notificationText, UISlideNotificationPosition position)
+			: this(parentView, notificationText, false, position)
+		{
+
+		}
+
 		public UISlideNotification (UIView parentView, string notificationText, bool showActivitySpinner, UISlideNotificationPosition position)
 		{
 			_parentView = parentView;
@@ -161,7 +179,6 @@ namespace UISlideNotification
 			notificationLabel.TextColor = this.TextColor;
 			notificationLabel.TextAlignment = this.TextAlignment;
 			notificationLabel.Alpha = _labelAlpha;
-			notificationLabel.Hidden = true;
 
 			if (_showActivitySpinner)
 			{
