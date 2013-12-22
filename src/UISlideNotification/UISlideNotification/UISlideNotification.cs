@@ -26,6 +26,7 @@ namespace UISlideNotification
 		private PointF _activityIndicatorViewCenter = new PointF (15, 15);
 		private bool _showActivitySpinner;
 		private int _notificationDuration = 3000;
+		private int _animationDuration = 300;
 		private UISlideNotificationPosition _position = UISlideNotificationPosition.Bottom;
 
 		private int labelHeight = 30;
@@ -40,6 +41,16 @@ namespace UISlideNotification
 		{
 			get { return _notificationDuration; }
 			set { _notificationDuration = value; }
+		}
+
+		/// <summary>
+		/// Gets or sets the duration of the notification animation in milliseconds.
+		/// </summary>
+		/// <value>Duration in milliseconds</value>
+		public int NotificationAnimationDuration
+		{
+			get { return _animationDuration; }
+			set { _animationDuration = value; }
 		}
 
 		/// <summary>
@@ -206,7 +217,7 @@ namespace UISlideNotification
 			else
 				newFrame.Y += labelHeight;
 
-			UIView.Transition(notificationLabel, 0.3f, UIViewAnimationOptions.CurveEaseInOut, () => {
+			UIView.Transition(notificationLabel, (_animationDuration / 1000f), UIViewAnimationOptions.CurveEaseInOut, () => {
 
 				notificationLabel.Frame = newFrame;
 
@@ -227,7 +238,7 @@ namespace UISlideNotification
 			else
 				newFrame.Y -= labelHeight;
 
-			UIView.Transition(notificationLabel, 0.3f, UIViewAnimationOptions.CurveEaseInOut, () => {
+			UIView.Transition(notificationLabel, (_animationDuration / 1000f), UIViewAnimationOptions.CurveEaseInOut, () => {
 
 				notificationLabel.Frame = newFrame;
 

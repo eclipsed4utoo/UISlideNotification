@@ -29,6 +29,7 @@ namespace UISlideNotification.Demo
 			this.ShowActivityNotificationButton.TouchUpInside += (object sender, EventArgs e) => 
 			{
 				var noti = new UISlideNotification(this.View, "Test Notification", true);
+				noti.NotificationAnimationDuration = 700;
 				noti.ShowNotification();
 			};
 
