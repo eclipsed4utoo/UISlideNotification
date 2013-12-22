@@ -22,9 +22,21 @@ namespace UISlideNotification.Demo
 			
 			this.ShowNotificationButton.TouchUpInside += (object sender, EventArgs e) => 
 			{
-				var noti = new UISlideNotification(this.View, "Test Notification", false, UISlideNotificationPosition.Bottom);
+				var noti = new UISlideNotification(this.View, "Test Notification");
 				noti.ShowNotification();
 			};	
+
+			this.ShowActivityNotificationButton.TouchUpInside += (object sender, EventArgs e) => 
+			{
+				var noti = new UISlideNotification(this.View, "Test Notification", true);
+				noti.ShowNotification();
+			};
+
+			this.ShowTopNotificationButton.TouchUpInside += (object sender, EventArgs e) => 
+			{
+				var noti = new UISlideNotification(this.View, "Test Notification", UISlideNotificationPosition.Top);
+				noti.ShowNotification();
+			};
 		}
 	}
 }

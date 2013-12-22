@@ -13,13 +13,29 @@ namespace UISlideNotification.Demo
 	partial class SlideNotificationViewController
 	{
 		[Outlet]
+		MonoTouch.UIKit.UIButton ShowActivityNotificationButton { get; set; }
+
+		[Outlet]
 		MonoTouch.UIKit.UIButton ShowNotificationButton { get; set; }
+
+		[Outlet]
+		MonoTouch.UIKit.UIButton ShowTopNotificationButton { get; set; }
 		
 		void ReleaseDesignerOutlets ()
 		{
 			if (ShowNotificationButton != null) {
 				ShowNotificationButton.Dispose ();
 				ShowNotificationButton = null;
+			}
+
+			if (ShowTopNotificationButton != null) {
+				ShowTopNotificationButton.Dispose ();
+				ShowTopNotificationButton = null;
+			}
+
+			if (ShowActivityNotificationButton != null) {
+				ShowActivityNotificationButton.Dispose ();
+				ShowActivityNotificationButton = null;
 			}
 		}
 	}
