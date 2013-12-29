@@ -1,6 +1,6 @@
 UISlideNotification
 ===================
-A notification that slides in and out of view for Xamarin.iOS
+A notification that slides in and out of view for Xamarin.iOS (MonoTouch)
 
 ### Simple Usage
 
