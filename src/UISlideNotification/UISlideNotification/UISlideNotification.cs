@@ -229,7 +229,7 @@ namespace UISlideNotification
 			});
 		}
 
-		private void HideNotification()
+		public void HideNotification()
 		{
 			var newFrame = new RectangleF (notificationLabel.Frame.X, notificationLabel.Frame.Y, notificationLabel.Frame.Width, notificationLabel.Frame.Height);
 
