@@ -1,6 +1,6 @@
 using System;
-using MonoTouch.UIKit;
-using System.Drawing;
+using UIKit;
+using CoreGraphics;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -23,7 +23,7 @@ namespace UISlideNotification
 		private float _labelAlpha = 0.8f;
 		private UIActivityIndicatorViewStyle _activityIndicatorViewStyle = UIActivityIndicatorViewStyle.White;
 		private float _activityIndicatorViewAlpha = 1.0f;
-		private PointF _activityIndicatorViewCenter = new PointF (15, 15);
+		private CGPoint _activityIndicatorViewCenter = new CGPoint (15, 15);
 		private bool _showActivitySpinner;
 		private int _notificationDuration = 3000;
 		private int _animationDuration = 300;
@@ -57,7 +57,7 @@ namespace UISlideNotification
 		/// Gets or sets the center point of the activity indicator.
 		/// </summary>
 		/// <value>Activity Indicator center point</value>
-		public PointF ActivityIndicatorViewCenter
+		public CGPoint ActivityIndicatorViewCenter
 		{
 			get { return _activityIndicatorViewCenter; }
 			set { _activityIndicatorViewCenter = value; }
@@ -123,7 +123,7 @@ namespace UISlideNotification
 			set { _labelAlpha = value; }
 		}
 
-		private float NotificationLabelTop
+		private nfloat NotificationLabelTop
 		{
 			get
 			{
@@ -184,7 +184,7 @@ namespace UISlideNotification
 		private UIActivityIndicatorView activityView = null;
 		private void SetupUI()
 		{
-			notificationLabel = new UILabel (new RectangleF (0, this.NotificationLabelTop, _parentView.Frame.Width, labelHeight));
+			notificationLabel = new UILabel (new CGRect (0, this.NotificationLabelTop, _parentView.Frame.Width, labelHeight));
 			notificationLabel.Text = _notificationText;
 			notificationLabel.BackgroundColor = this.BackgroundColor;
 			notificationLabel.TextColor = this.TextColor;
@@ -210,7 +210,7 @@ namespace UISlideNotification
 			if (_showActivitySpinner)
 				activityView.StartAnimating ();
 
-			var newFrame = new RectangleF (notificationLabel.Frame.X, notificationLabel.Frame.Y, notificationLabel.Frame.Width, notificationLabel.Frame.Height);
+			var newFrame = new CGRect (notificationLabel.Frame.X, notificationLabel.Frame.Y, notificationLabel.Frame.Width, notificationLabel.Frame.Height);
 
 			if (_position == UISlideNotificationPosition.Bottom)
 				newFrame.Y -= labelHeight;
@@ -231,7 +231,7 @@ namespace UISlideNotification
 
 		public void HideNotification()
 		{
-			var newFrame = new RectangleF (notificationLabel.Frame.X, notificationLabel.Frame.Y, notificationLabel.Frame.Width, notificationLabel.Frame.Height);
+			var newFrame = new CGRect (notificationLabel.Frame.X, notificationLabel.Frame.Y, notificationLabel.Frame.Width, notificationLabel.Frame.Height);
 
 			if (_position == UISlideNotificationPosition.Bottom)
 				newFrame.Y += labelHeight;

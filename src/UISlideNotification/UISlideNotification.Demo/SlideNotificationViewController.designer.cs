@@ -4,7 +4,7 @@
 // actions made in the UI designer. If it is removed, they will be lost.
 // Manual changes to this file may not be handled correctly.
 //
-using MonoTouch.Foundation;
+using Foundation;
 using System.CodeDom.Compiler;
 
 namespace UISlideNotification.Demo
@@ -13,13 +13,13 @@ namespace UISlideNotification.Demo
 	partial class SlideNotificationViewController
 	{
 		[Outlet]
-		MonoTouch.UIKit.UIButton ShowActivityNotificationButton { get; set; }
+		UIKit.UIButton ShowActivityNotificationButton { get; set; }
 
 		[Outlet]
-		MonoTouch.UIKit.UIButton ShowNotificationButton { get; set; }
+		UIKit.UIButton ShowNotificationButton { get; set; }
 
 		[Outlet]
-		MonoTouch.UIKit.UIButton ShowTopNotificationButton { get; set; }
+		UIKit.UIButton ShowTopNotificationButton { get; set; }
 		
 		void ReleaseDesignerOutlets ()
 		{
